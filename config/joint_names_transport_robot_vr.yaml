@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'right_wheel_joint', 'left_wheel_joint', 'caster_bracket_fr_joint', 'caster_wheel_fr_joint', 'caster_bracket_fl_joint', 'caster_wheel_fl_joint', 'caster_bracket_br_joint', 'caster_wheel_br_joint', 'caster_bracket_bl_joint', 'caster_wheel_bl_joint', 'sensor_lidar_joint', ]

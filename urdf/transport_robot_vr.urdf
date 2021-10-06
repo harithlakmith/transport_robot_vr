@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="transport_robot_vr">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.239272597139028 -0.425686911152442 0.316400014216297"
+        rpy="0 0 0" />
+      <mass
+        value="7.7126313352559" />
+      <inertia
+        ixx="0.218043843984486"
+        ixy="0.000214487881946537"
+        ixz="-0.00335723776646078"
+        iyy="0.40292384723583"
+        iyz="-0.000177114555396355"
+        izz="0.475143645241875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="-1.63452584800439E-13 0.0174517845569556 5.28466159721575E-14"
+        rpy="0 0 0" />
+      <mass
+        value="1.05554979431065" />
+      <inertia
+        ixx="0.00272800018154041"
+        ixy="8.75663073210922E-18"
+        ixz="-1.35019141393646E-15"
+        iyy="0.00524638214807145"
+        iyz="-2.67459722759963E-18"
+        izz="0.00272800018153667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.23478 -0.61592 0.25068"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-5.68156632851924E-14 -0.0174517845569556 1.62092561595273E-13"
+        rpy="0 0 0" />
+      <mass
+        value="1.05554979431065" />
+      <inertia
+        ixx="0.00272800018153674"
+        ixy="-2.59356417157785E-18"
+        ixz="-1.44166636781721E-15"
+        iyy="0.00524638214807144"
+        iyz="8.24078023340408E-18"
+        izz="0.00272800018154034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.23478 -0.23592 0.25068"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="caster_plate_fr">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 0.00356951327933422 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0110152652413026" />
+      <inertia
+        ixx="1.96229535018149E-06"
+        ixy="-7.15245554726787E-23"
+        ixz="-3.1415926535898E-07"
+        iyy="3.70754403396775E-06"
+        iyz="-1.42886085432354E-25"
+        izz="1.9622953501815E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_plate_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_plate_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_plate_fr_joint"
+    type="fixed">
+    <origin
+      xyz="0.46814 -0.5815 0.20068"
+      rpy="1.5708 0 0.1974" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_plate_fr" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="caster_bracket_fr">
+    <inertial>
+      <origin
+        xyz="-0.000319556225215512 -0.0210926454002197 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00691249977391735" />
+      <inertia
+        ixx="1.19530519458312E-06"
+        ixy="-3.07204052635806E-08"
+        ixz="-1.46576404544397E-21"
+        iyy="9.65073272963259E-07"
+        iyz="-6.41064974728596E-22"
+        izz="2.05852583374966E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_bracket_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_bracket_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_bracket_fr_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 1.3892 0" />
+    <parent
+      link="caster_plate_fr" />
+    <child
+      link="caster_bracket_fr" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="caster_wheel_fr">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 1.11022302462516E-16 -2.22044604925031E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0116303796732426" />
+      <inertia
+        ixx="1.03878606847179E-06"
+        ixy="-9.11643507912934E-23"
+        ixz="2.15149677325042E-21"
+        iyy="1.03878606847179E-06"
+        iyz="1.02156805650299E-22"
+        izz="1.38797982012729E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_wheel_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_wheel_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_fr_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.035 0"
+      rpy="-1.5708 1.1183 1.5708" />
+    <parent
+      link="caster_bracket_fr" />
+    <child
+      link="caster_wheel_fr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="caster_plate_fl">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0.00356951327933419 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0110152652413026" />
+      <inertia
+        ixx="1.9622953501815E-06"
+        ixy="3.03304008234509E-23"
+        ixz="-3.14159265358981E-07"
+        iyy="3.70754403396775E-06"
+        iyz="-8.0031743736764E-23"
+        izz="1.9622953501815E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_plate_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_plate_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_plate_fl_joint"
+    type="fixed">
+    <origin
+      xyz="0.46814 -0.27035 0.20068"
+      rpy="1.5708 0 1.3734" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_plate_fl" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="caster_bracket_fl">
+    <inertial>
+      <origin
+        xyz="-0.000319556225215401 -0.0210926454002197 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00691249977391736" />
+      <inertia
+        ixx="1.19530519458312E-06"
+        ixy="-3.07204052635809E-08"
+        ixz="-5.97999884087554E-21"
+        iyy="9.65073272963258E-07"
+        iyz="-5.18984748543134E-22"
+        izz="2.05852583374966E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_bracket_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_bracket_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_bracket_fl_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="3.14159265358979 -0.196320698416971 3.14159265358979" />
+    <parent
+      link="caster_plate_fl" />
+    <child
+      link="caster_bracket_fl" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="caster_wheel_fl">
+    <inertial>
+      <origin
+        xyz="0 5.55111512312578E-17 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0116303796732426" />
+      <inertia
+        ixx="1.03878606847178E-06"
+        ixy="-6.76026280306033E-23"
+        ixz="2.90960780465527E-22"
+        iyy="1.03878606847178E-06"
+        iyz="1.65849712816882E-22"
+        izz="1.38797982012728E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_wheel_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_wheel_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_fl_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.035 0"
+      rpy="-1.5707963267949 -0.443434887534806 1.5707963267949" />
+    <parent
+      link="caster_bracket_fl" />
+    <child
+      link="caster_wheel_fl" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="caster_plate_br">
+    <inertial>
+      <origin
+        xyz="0 0.00356951327933422 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0110152652413026" />
+      <inertia
+        ixx="1.9622953501815E-06"
+        ixy="-6.22580619164119E-22"
+        ixz="-3.1415926535898E-07"
+        iyy="3.70754403396775E-06"
+        iyz="-1.87537029624561E-23"
+        izz="1.9622953501815E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_plate_br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_plate_br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_plate_br_joint"
+    type="fixed">
+    <origin
+      xyz="0.00142418339285124 -0.581495282713603 0.200680039064964"
+      rpy="1.5707963267949 0 1.37340076694502" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_plate_br" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="caster_bracket_br">
+    <inertial>
+      <origin
+        xyz="-0.000319556225215734 -0.0210926454002198 -1.59247615094671E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00691249977391736" />
+      <inertia
+        ixx="1.19530519458312E-06"
+        ixy="-3.07204052635803E-08"
+        ixz="-1.33030494833228E-19"
+        iyy="9.65073272963259E-07"
+        iyz="-4.5221964088274E-21"
+        izz="2.05852583374966E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_bracket_br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_bracket_br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_bracket_br_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="3.14159265358979 -0.242747723344276 3.14159265358979" />
+    <parent
+      link="caster_plate_br" />
+    <child
+      link="caster_bracket_br" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="caster_wheel_br">
+    <inertial>
+      <origin
+        xyz="-3.88578058618805E-16 8.32667268468867E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0116303796732426" />
+      <inertia
+        ixx="1.03878606847179E-06"
+        ixy="-2.50222135297291E-23"
+        ixz="-1.83303223741751E-21"
+        iyy="1.03878606847179E-06"
+        iyz="-1.29040175558272E-21"
+        izz="1.38797982012729E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_wheel_br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_wheel_br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_br_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.035 0"
+      rpy="1.57079632679507 -0.562369153856253 -1.57079632679499" />
+    <parent
+      link="caster_bracket_br" />
+    <child
+      link="caster_wheel_br" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="caster_plate_bl">
+    <inertial>
+      <origin
+        xyz="0 0.00356951327933422 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0110152652413026" />
+      <inertia
+        ixx="1.9622953501815E-06"
+        ixy="-5.74405903814142E-23"
+        ixz="-3.14159265358981E-07"
+        iyy="3.70754403396775E-06"
+        iyz="5.22479757380569E-23"
+        izz="1.9622953501815E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_plate_bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_plate_bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_plate_bl_joint"
+    type="fixed">
+    <origin
+      xyz="0.00142418339285285 -0.270349957229279 0.200680039064964"
+      rpy="1.5707963267949 0 0.197395559849882" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_plate_bl" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="caster_bracket_bl">
+    <inertial>
+      <origin
+        xyz="-0.000319556225215401 -0.0210926454002197 -1.04083408558608E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00691249977391735" />
+      <inertia
+        ixx="1.19530519458312E-06"
+        ixy="-3.07204052635812E-08"
+        ixz="-2.04479047423108E-21"
+        iyy="9.65073272963255E-07"
+        iyz="-1.42688655665397E-22"
+        izz="2.05852583374966E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_bracket_bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_bracket_bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_bracket_bl_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 1.44537361445908 0" />
+    <parent
+      link="caster_plate_bl" />
+    <child
+      link="caster_bracket_bl" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="caster_wheel_bl">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0116303796732426" />
+      <inertia
+        ixx="1.03878606847178E-06"
+        ixy="-3.15879596418687E-23"
+        ixz="1.32348898008484E-23"
+        iyy="1.03878606847178E-06"
+        iyz="-2.56425989891439E-23"
+        izz="1.38797982012728E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_wheel_bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/caster_wheel_bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_bl_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.035 0"
+      rpy="1.57079632679491 -1.42706514226592 -1.57079632679491" />
+    <parent
+      link="caster_bracket_bl" />
+    <child
+      link="caster_wheel_bl" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="sensor_lidar">
+    <inertial>
+      <origin
+        xyz="-0.000230584762147212 0.0189969048128179 -1.93320381924877E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.162442510419219" />
+      <inertia
+        ixx="7.45189883631214E-05"
+        ixy="4.83673451301878E-07"
+        ixz="7.31792018034995E-12"
+        iyy="0.000105566723329811"
+        iyz="3.42008473865005E-12"
+        izz="7.3925728454446E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/sensor_lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.117647058823529 0.27843137254902 0.517647058823529 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/sensor_lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sensor_lidar_joint"
+    type="continuous">
+    <origin
+      xyz="0.45478 -0.42592 0.37568"
+      rpy="1.5708 0 0.3232" />
+    <parent
+      link="base_link" />
+    <child
+      link="sensor_lidar" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="black_plate">
+    <inertial>
+      <origin
+        xyz="-0.115633194104091 0.110452616838506 1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="3.81776734747415" />
+      <inertia
+        ixx="0.150589880915668"
+        ixy="0.0676585423180378"
+        ixz="9.35847709405592E-17"
+        iyy="0.201899557795147"
+        iyz="-2.22866258465586E-17"
+        izz="0.218979187666568" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/black_plate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/black_plate.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="black_plate_joint"
+    type="fixed">
+    <origin
+      xyz="0.23478 -0.42592 0.49568"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="black_plate" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="display_cover">
+    <inertial>
+      <origin
+        xyz="-0.3045337446376 0.374950896943882 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.296" />
+      <inertia
+        ixx="0.0204782224976095"
+        ixy="-0.000930013405754098"
+        ixz="-1.43091243839996E-19"
+        iyy="0.0194176732523905"
+        iyz="-2.24781273343162E-18"
+        izz="0.00225746374999999" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/display_cover.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/display_cover.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="display_cover_joint"
+    type="fixed">
+    <origin
+      xyz="-0.050663 0.0064728 0.004"
+      rpy="0 0 -0.14652" />
+    <parent
+      link="black_plate" />
+    <child
+      link="display_cover" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="display_top">
+    <inertial>
+      <origin
+        xyz="-9.99200722162641E-16 0.000111628391233243 -0.00048737983367253"
+        rpy="0 0 0" />
+      <mass
+        value="0.0329999999999999" />
+      <inertia
+        ixx="3.32777499999998E-05"
+        ixy="5.83401984976003E-19"
+        ixz="1.42682431959349E-19"
+        iyy="0.000249161158417901"
+        iyz="-7.24076384105855E-06"
+        izz="0.000279116591582096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/display_top.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/display_top.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="display_top_joint"
+    type="fixed">
+    <origin
+      xyz="-0.3154 0.38126 0"
+      rpy="0.75145 -1.5708 0" />
+    <parent
+      link="display_cover" />
+    <child
+      link="display_top" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="emg_button">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 0.000928979322698864 1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145013459291552" />
+      <inertia
+        ixx="1.80052081287291E-06"
+        ixy="-1.77622086800263E-22"
+        ixz="-5.29395592033938E-23"
+        iyy="3.37085407011684E-06"
+        iyz="-1.53104664836743E-21"
+        izz="1.80052081287291E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/emg_button.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.694117647058824 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/emg_button.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="emg_button_joint"
+    type="fixed">
+    <origin
+      xyz="-0.31963 0.38372 -0.179"
+      rpy="0 0.85383 1.0445" />
+    <parent
+      link="display_cover" />
+    <child
+      link="emg_button" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="green_button">
+    <inertial>
+      <origin
+        xyz="0.0134747597602842 0.000986677740974939 0.0125000000599694"
+        rpy="0 0 0" />
+      <mass
+        value="0.00122894467110926" />
+      <inertia
+        ixx="6.33895594338568E-08"
+        ixy="3.15291659600342E-16"
+        ixz="4.74521610621376E-19"
+        iyy="1.25973111940053E-07"
+        iyz="-1.20564757801475E-16"
+        izz="6.33895594323876E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/green_button.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.286274509803922 0.662745098039216 0.329411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://transport_robot_vr/meshes/green_button.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="green_button_joint"
+    type="fixed">
+    <origin
+      xyz="-0.30294 0.4047 0.1665"
+      rpy="0 0 1.0445" />
+    <parent
+      link="display_cover" />
+    <child
+      link="green_button" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
